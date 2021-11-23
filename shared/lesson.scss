@@ -1,0 +1,49 @@
+@import './colors.scss';
+
+body {
+  margin-bottom: 8em;
+}
+
+pre {
+  padding: 1em;
+}
+
+pre,
+code {
+  background-color: #111111;
+}
+
+.lesson,
+.lesson-header {
+  margin: auto;
+  max-width: 800px;
+  h1 {
+    font-size: 40px;
+  }
+  pre {
+    font-size: 20px;
+  }
+}
+
+.lesson-header {
+  margin-bottom: 1em;
+}
+
+.navigation {
+  padding: 0.5em;
+  position: sticky;
+  color: white;
+  background-color: black;
+}
+
+.navigation a {
+  font-family: 'Press Start 2P', sans-serif;
+  color: white;
+  text-decoration: none;
+  &:hover {
+    color: lighten($blue, 20%);
+  }
+  &:active {
+    color: lighten($blue, 10%);
+  }
+}

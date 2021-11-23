@@ -1,0 +1,162 @@
+@use './fonts.scss';
+@import './colors.scss';
+
+@import url('https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:wght@500;600;700&family=Press+Start+2P&display=swap');
+
+html,
+body,
+* {
+  box-sizing: border-box;
+}
+
+body,
+main {
+  font-family: 'Averia', serif;
+  font-size: 20px;
+  margin: 0;
+  position: relative;
+}
+
+h1 {
+  font-family: 'Press Start 2P', monospace;
+  background-color: $blue;
+  background-image: linear-gradient(45deg, $blue, $fuschia);
+  font-size: 3em;
+  background-clip: text;
+  line-height: 1.3em;
+  text-align: center;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+button,
+textarea,
+label {
+  font-family: 'Montserrat', sans-serif;
+  & > code {
+    background-color: lighten($blue, 20%);
+  }
+}
+
+pre {
+  overflow-y: scroll;
+}
+
+pre {
+  color: white;
+  padding: 3px 6px;
+  font-family: 'Courier Prime', monospace;
+}
+
+code {
+  font-family: 'Courier Prime', monospace;
+}
+
+a {
+  color: $teal;
+  text-decoration: none;
+  &:hover {
+    text-decoration: dashed;
+    color: lighten($teal, 10%);
+  }
+}
+
+p,
+li {
+  line-height: 1.6em;
+}
+
+p code,
+li code {
+  color: black;
+  font-size: 0.9em;
+  padding: 2px 4px;
+  background-color: lighten($teal, 50%);
+}
+
+button {
+  color: white;
+  font-weight: bold;
+  background-color: $fuschia;
+  padding: 6px 12px;
+  border: 4px solid darken($fuschia, 20%);
+  &:hover {
+    background-color: lighten($fuschia, 10%);
+  }
+  &:active {
+    background-color: darken($fuschia, 10%);
+  }
+  &:disabled {
+    opacity: 50%;
+  }
+}
+
+input {
+  color: $green;
+  font-weight: bold;
+  background-color: white;
+  padding: 6px 12px;
+  border: 4px solid darken($fuschia, 20%);
+}
+
+textarea {
+  background: lighten($coral, 20%);
+  border: 2px solid darken($coral, 10%);
+  min-height: 200px;
+}
+
+canvas {
+  border: 4px solid $coral;
+}
+
+a > code {
+  text-decoration: underline;
+}
+
+a:hover > code {
+  background-color: lighten($blue, 20%);
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+}
+
+.controls {
+  border: 2px dashed $blue;
+  padding: 12px;
+  margin: 12px 0;
+}
+
+.columns {
+  display: flex;
+  height: 100%;
+  gap: 2em;
+}
+
+.column {
+  border: 1px solid lighten($blue, 20%);
+  width: 100%;
+}
+
+.form-field {
+  margin-bottom: 1em;
+  label,
+  input {
+    width: 100%;
+    display: block;
+  }
+  label {
+    font-size: 0.8em;
+  }
+}

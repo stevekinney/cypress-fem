@@ -1,0 +1,58 @@
+{
+  "name": "cypress-frontend-masters",
+  "version": "0.0.0",
+  "author": "Steve Kinney <hello+frontendmasters@stevekinney.net>",
+  "scripts": {
+    "start": "npm run all",
+    "ui": "parcel index.html lessons/**/*.html applications/**/*.html --no-cache",
+    "api": "node api/server.js",
+    "both": "concurrently \"npm:ui\" \"npm:api\"",
+    "test": "jest --watch",
+    "build": "npm run build-lessons && npm run build-site",
+    "build-site": "parcel build index.html lessons/**/*.html applications/**/*.html",
+    "build-lessons": "eleventy --config=.eleventy.cjs",
+    "lessons": "npm run build-lessons -- --watch --quiet",
+    "all": "concurrently \"npm:ui\" \"npm:api\" \"npm:lessons\""
+  },
+  "type": "module",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.12.1",
+    "@babel/core": "^7.16.0",
+    "@babel/plugin-transform-runtime": "^7.16.0",
+    "@babel/polyfill": "^7.12.1",
+    "@babel/preset-env": "^7.16.0",
+    "@parcel/babel-preset-env": "^2.0.1",
+    "@parcel/transformer-sass": "^2.0.1",
+    "babel-eslint": "^10.1.0",
+    "babel-jest": "^27.3.1",
+    "concurrently": "^6.4.0",
+    "core-js": "^3.19.1",
+    "eslint": "^8.2.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.25.3",
+    "jest": "^27.3.1",
+    "parcel": "^2.0.1",
+    "postcss-fontpath": "^1.0.0",
+    "posthtml-doctype": "^1.1.1",
+    "posthtml-extend": "^0.6.0",
+    "posthtml-prism": "^1.0.4",
+    "prettier": "^2.4.1"
+  },
+  "dependencies": {
+    "base-64": "^1.0.0",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "lodash": "^4.17.21",
+    "markdown-it": "^12.2.0",
+    "rxjs": "^7.4.0"
+  },
+  "source": [
+    "index.html"
+  ],
+  "jest": {
+    "transform": {
+      "^.+\\.jsx?$": "babel-jest"
+    }
+  }
+}

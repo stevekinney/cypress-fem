@@ -1,0 +1,11 @@
+.cache
+.DS_Store
+.DS_Store
+.parcel-cache
+*.local
+dist
+dist-ssr
+node_modules
+public/
+yarn-error.log
+lessons/

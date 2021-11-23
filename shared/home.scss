@@ -1,0 +1,19 @@
+ul,
+ol {
+  padding-left: 0;
+}
+
+li {
+  font-size: 1em;
+  font-size: 0.9em;
+  text-indent: 0.5em;
+}
+
+ol > li {
+  list-style: lower-roman;
+}
+
+.lessons,
+.applications {
+  width: 100%;
+}

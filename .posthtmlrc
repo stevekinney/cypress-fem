@@ -1,0 +1,15 @@
+{
+  "plugins": {
+    "posthtml-doctype": {
+      "doctype": "HTML 5"
+    },
+    "posthtml-extend": {
+      "root": "./shared/"
+    },
+    "posthtml-prism": {
+      "highlight": {
+        "inline": true
+      }
+    }
+  }
+}
